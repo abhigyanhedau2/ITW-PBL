@@ -97,5 +97,5 @@ def animate(i):
     # plt.tight_layout() automatically adjusts subplot params so that the subplot(s) fits in to the figure area.
     plt.tight_layout()
 
-ani = FuncAnimation(fig, animate, interval=50)
+ani = FuncAnimation(fig, animate, interval=0.001)
 plt.show()

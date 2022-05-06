@@ -59,12 +59,12 @@ def animate(i):
     ax.clear()
 
     # Plotting the line graphs for each of the category
-    ax.plot(active.Date[:i], active.Active[:i], label="Active", color="grey")
+    ax.plot(active.Date[:i], active.Active[:i], label="Active", color="blue")
     ax.plot(active.Date[:i], recovered.Recovered[:i],
             label="Recovered", color="green")
-    ax.plot(active.Date[:i], death.Deaths[:i], label="Deaths", color="black")
+    ax.plot(active.Date[:i], death.Deaths[:i], label="Deaths", color="red")
     ax.plot(active.Date[:i], total.Confirmed[:i],
-            label="Confirmed", color="red")
+            label="Confirmed", color="black")
 
     # Writing the legends
     ax.legend()
@@ -77,7 +77,7 @@ def animate(i):
     # plt.tight_layout() automatically adjusts subplot params so that the subplot(s) fits in to the figure area.
     plt.tight_layout()
 
-ani = FuncAnimation(fig, animate, interval=100, blit=False)
+ani = FuncAnimation(fig, animate, interval=0.01, blit=False)
 
 # Displaying the graph
 plt.show()
